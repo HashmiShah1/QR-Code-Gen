@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #262a2f;
 }
 
-.container{
+.container {
     width: 400px;
     padding: 25px 35px;
     position: absolute;
@@ -19,13 +19,13 @@ body{
     border-radius: 1rem;
 }
 
-.container p{
+.container p {
     font-weight: 500;
     font-size: 1rem;
     margin-bottom: 8px;
 }
 
-.container input{
+.container input {
     width: 100%;
     height: 50px;
     border: 1px solid #494eea;
@@ -35,7 +35,7 @@ body{
     border-radius: 5px;
 }
 
-.container button{
+.container button {
     width: 100%;
     height: 50px;
     background: #494eea;
@@ -49,11 +49,11 @@ body{
     font-weight: 500;
 }
 
-.container button:hover{
+.container button:hover {
     background: #5257f5;
 }
 
-.imgBox{
+.imgBox {
     width: 200px;
     border-radius: 5px;
     max-height: 0;
@@ -61,35 +61,57 @@ body{
     transition: max-height 1s ease;
 }
 
-.imgBox img{
+.imgBox img {
     width: 100%;
     padding: 10px;
 }
 
-.imgBox.showImg{
+.imgBox.showImg {
     max-height: 300px;
     margin: 10px auto;
     border: 1px solid #d1d1d1;
 }
 
-.error{
+.error {
     animation: shake 0.1s linear 10;
 }
 
 @keyframes shake {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    25%{
+    25% {
         transform: translateX(-2px);
     }
-    500%{
+    500% {
         transform: translateX(0);
     }
-    75%{
+    75% {
         transform: translateX(2px);
     }
-    100%{
+    100% {
         transform: translateX(0);
+    }
+}
+
+/* Media Query for Responsive Design */
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Adjust as needed */
+        max-width: 400px; /* Maximum width */
+    }
+
+    .container p {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .container input,
+    .container button {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .imgBox {
+        width: 100%;
     }
 }
